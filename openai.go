@@ -33,7 +33,7 @@ func (ai openAI) printResp(prompt string) {
   }
 
   err := ai.Cli.CompletionStreamWithEngine(
-    ai.Ctx, gpt3.TextDavinvi003Engine, req,
+    ai.Ctx, gpt3.TextDavinci003Engine, req,
     func(resp *gpt3.CompletionResponse) {
       fmt.Print(resp.Choices[0].Text)
     },
